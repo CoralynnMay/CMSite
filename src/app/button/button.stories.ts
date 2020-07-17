@@ -1,5 +1,8 @@
 import { ButtonComponent } from './button.component';
-import { ButtonStyleDirective } from '../button-style.directive';
+import {
+  ButtonStyleDirective,
+  AppButtonStyles,
+} from '../button-style.directive';
 import { moduleMetadata } from '@storybook/angular';
 import { select, withKnobs, text } from '@storybook/addon-knobs';
 
@@ -17,18 +20,13 @@ export default {
   ],
 };
 
-const appButtonStyleOptions = {
-  primary: 'btn-primary',
-  secondary: 'btn-secondary',
-};
-
 export const regular = () => ({
   component: ButtonComponent,
   props: {
     appButtonStyle: select(
       'Button Style',
-      appButtonStyleOptions,
-      'btn-primary'
+      AppButtonStyles,
+      AppButtonStyles.primary
     ),
     text: text('Text', 'Button'),
   },

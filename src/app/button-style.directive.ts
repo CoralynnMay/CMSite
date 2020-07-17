@@ -9,11 +9,16 @@ import {
   SimpleChanges,
 } from '@angular/core';
 
+export enum AppButtonStyles {
+  primary = 'btn-primary',
+  secondary = 'btn-secondary',
+}
+
 @Directive({
   selector: '[appButtonStyle]',
 })
 export class ButtonStyleDirective implements AfterViewInit, OnChanges {
-  @Input() appButtonStyle: string;
+  @Input() appButtonStyle: AppButtonStyles;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
