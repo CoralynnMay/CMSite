@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~sanitize.css";
+@import "~sanitize.css/forms.css";
+
+html {
+  font-size: 10/16 * 100%; // Set default font size to 10px responsively to make using rem easier for desktop page size
+}
