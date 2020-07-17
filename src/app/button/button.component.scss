@@ -2,25 +2,21 @@
 
 .btn {
   @media only screen and (prefers-color-scheme: light) {
-    --color-box-shadow: #{rgba($color-primary-light, 0.35)};
+    --color-box-shadow: #{hsla(0, 0, 5%, 0.35)};
   }
 
   @media only screen and (prefers-color-scheme: dark) {
-    --color-box-shadow: #{rgba($color-primary-dark, 0.4)};
+    --color-box-shadow: #{hsla(0, 0, 5%, 0.6)};
   }
 
   border: none;
-  border-radius: 0;
+  text-decoration: none;
+  border-radius: 1rem;
   padding: 1rem 1.5rem;
   font-size: 1.6rem;
   font-family: $font-primary;
   color: var(--color-text-invert);
-  background-color: var(--color-primary);
-  // background-image: linear-gradient(
-  //   to bottom right,
-  //   mix(#fff, $color-primary-light, 20%),
-  //   mix(#000, $color-primary-light, 20%)
-  // );
+  // background-color: var(--color-primary);
   transition: all 0.2s;
 
   &:hover {
@@ -31,5 +27,45 @@
   &:active {
     transform: translateY(-0.2rem);
     box-shadow: 0 0.3rem 1rem var(--color-box-shadow);
+  }
+
+  &:not(:last-child) {
+    margin-right: 3rem;
+  }
+
+  :host(.btn-primary) & {
+    @media only screen and (prefers-color-scheme: light) {
+      background-image: linear-gradient(
+        to bottom right,
+        mix(#fff, $color-primary-light, 20%),
+        mix(#000, $color-primary-light, 20%)
+      );
+    }
+
+    @media only screen and (prefers-color-scheme: dark) {
+      background-image: linear-gradient(
+        to bottom right,
+        mix(#fff, $color-primary-dark, 15%),
+        mix(#000, $color-primary-dark, 35%)
+      );
+    }
+  }
+
+  :host(.btn-secondary) & {
+    @media only screen and (prefers-color-scheme: light) {
+      background-image: linear-gradient(
+        to bottom right,
+        mix(#fff, $color-secondary-light, 20%),
+        mix(#000, $color-secondary-light, 20%)
+      );
+    }
+
+    @media only screen and (prefers-color-scheme: dark) {
+      background-image: linear-gradient(
+        to bottom right,
+        mix(#fff, $color-secondary-dark, 15%),
+        mix(#000, $color-secondary-dark, 35%)
+      );
+    }
   }
 }

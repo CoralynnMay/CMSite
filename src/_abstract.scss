@@ -2,10 +2,10 @@ $color-primary-light: hsl(335, 83%, 45%);
 $color-primary-dark: hsl(335, 83%, 36%);
 $color-secondary-light: hsl(198, 63%, 40%);
 $color-secondary-dark: hsl(198, 63%, 32%);
-$color-background-dark: hsl(198, 69%, 6%);
+$color-background-dark: hsl(198, 69%, 10%);
 $color-background-light: hsl(198, 29%, 95%);
-$color-text-dark: $color-background-light;
-$color-text-light: $color-background-dark;
+$color-text-dark: hsl(198, 29%, 95%);
+$color-text-light: hsl(198, 69%, 6%);
 $color-text-muted-dark: mix(#000, $color-text-dark, 45%);
 $color-text-muted-light: mix(#fff, $color-text-light, 65%);
 
