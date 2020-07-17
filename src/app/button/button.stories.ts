@@ -30,5 +30,5 @@ export const regular = () => ({
     ),
     text: text('Text', 'Button'),
   },
-  template: `<app-button appButtonStyle="{{appButtonStyle}}">{{text}}</app-button>`,
+  template: `<app-button [appButtonStyle]="appButtonStyle">{{text}}</app-button>`,
 });
