@@ -1,0 +1,7 @@
+@import "../abstract";
+
+h1 {
+  font-family: $font-primary;
+  font-weight: 400;
+  color: var(--color-text);
+}

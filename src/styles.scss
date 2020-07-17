@@ -1,6 +1,11 @@
 @import "~sanitize.css";
 @import "~sanitize.css/forms.css";
 
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+
+@import "abstract";
+
 html {
   font-size: 10/16 * 100%; // Set default font size to 10px responsively to make using rem easier for desktop page size
+  background-color: var(--color-background);
 }

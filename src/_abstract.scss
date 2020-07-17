@@ -1,0 +1,32 @@
+$color-primary-light: hsl(335, 83%, 45%);
+$color-primary-dark: hsl(335, 83%, 36%);
+$color-secondary-light: hsl(198, 63%, 40%);
+$color-secondary-dark: hsl(198, 63%, 32%);
+$color-background-dark: hsl(198, 69%, 6%);
+$color-background-light: hsl(198, 29%, 95%);
+$color-text-dark: $color-background-light;
+$color-text-light: $color-background-dark;
+$color-text-muted-dark: mix(#000, $color-text-dark, 45%);
+$color-text-muted-light: mix(#fff, $color-text-light, 65%);
+
+:root {
+  --color-background: #{$color-background-light};
+  --color-background-invert: #{$color-background-dark};
+  --color-text: #{$color-text-light};
+  --color-text-invert: #{$color-text-dark};
+  --color-text-muted: #{$color-text-muted-light};
+  --color-primary: #{$color-primary-light};
+  --color-secondary: #{$color-secondary-light};
+  @media (prefers-color-scheme: dark) {
+    --color-background: #{$color-background-dark};
+    --color-background-invert: #{$color-background-light};
+    --color-text: #{$color-text-dark};
+    --color-text-invert: #{$color-text-light};
+    --color-text-muted: #{$color-text-muted-dark};
+    --color-primary: #{$color-primary-dark};
+    --color-secondary: #{$color-secondary-dark};
+  }
+}
+
+$font-primary: "Work Sans", sans-serif;
+$font-secondary: "IBM Plex Sans", sans-serif;
