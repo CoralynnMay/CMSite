@@ -29,7 +29,6 @@ export const regular = () => ({
       AppButtonStyles.primary
     ),
     text: text('Text', 'Button'),
-    test: text('test', 'some'),
   },
-  template: `<app-button appButtonStyle="{{appButtonStyle}}" test="{{test}}">{{text}}</app-button>`,
+  template: `<app-button appButtonStyle="{{appButtonStyle}}">{{text}}</app-button>`,
 });
