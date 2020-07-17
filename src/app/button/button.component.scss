@@ -1,0 +1,35 @@
+@import "../../abstract";
+
+.btn {
+  @media only screen and (prefers-color-scheme: light) {
+    --color-box-shadow: #{rgba($color-primary-light, 0.35)};
+  }
+
+  @media only screen and (prefers-color-scheme: dark) {
+    --color-box-shadow: #{rgba($color-primary-dark, 0.4)};
+  }
+
+  border: none;
+  border-radius: 0;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  font-family: $font-primary;
+  color: var(--color-text-invert);
+  background-color: var(--color-primary);
+  // background-image: linear-gradient(
+  //   to bottom right,
+  //   mix(#fff, $color-primary-light, 20%),
+  //   mix(#000, $color-primary-light, 20%)
+  // );
+  transition: all 0.2s;
+
+  &:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 0.5rem 1.5rem var(--color-box-shadow);
+  }
+
+  &:active {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.3rem 1rem var(--color-box-shadow);
+  }
+}

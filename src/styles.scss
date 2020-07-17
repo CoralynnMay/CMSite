@@ -9,3 +9,11 @@ html {
   font-size: 10/16 * 100%; // Set default font size to 10px responsively to make using rem easier for desktop page size
   background-color: var(--color-background);
 }
+
+.storybook-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
