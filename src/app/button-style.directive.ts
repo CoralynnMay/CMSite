@@ -10,8 +10,8 @@ import {
 } from '@angular/core';
 
 export enum AppButtonStyles {
-  primary = 'btn-primary',
-  secondary = 'btn-secondary',
+  primary = 'primary',
+  secondary = 'secondary',
 }
 
 @Directive({
@@ -27,13 +27,15 @@ export class ButtonStyleDirective implements AfterViewInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.renderer.removeClass(
-      this.el.nativeElement,
-      changes.appButtonStyle.previousValue
-    );
-    this.renderer.addClass(
-      this.el.nativeElement,
-      changes.appButtonStyle.currentValue
-    );
+    if (changes.appButtonStyle) {
+      this.renderer.removeClass(
+        this.el.nativeElement,
+        `btn-${changes.appButtonStyle.previousValue}`
+      );
+      this.renderer.addClass(
+        this.el.nativeElement,
+        `btn-${changes.appButtonStyle.currentValue}`
+      );
+    }
   }
 }
