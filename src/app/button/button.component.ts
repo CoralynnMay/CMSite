@@ -1,4 +1,4 @@
-import { Component, OnInit, Directive, HostBinding } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-button',

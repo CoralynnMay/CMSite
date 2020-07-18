@@ -2,11 +2,11 @@ import { ButtonComponent } from './button.component';
 import {
   ButtonStyleDirective,
   AppButtonStyles,
-} from '../button-style.directive';
+} from './button-style.directive';
 import {
   ButtonVariantDirective,
   AppButtonVariants,
-} from '../button-variant.directive';
+} from './button-variant.directive';
 import { moduleMetadata } from '@storybook/angular';
 import { select, withKnobs, text } from '@storybook/addon-knobs';
 
