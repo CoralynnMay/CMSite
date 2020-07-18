@@ -9,7 +9,7 @@ import {
 
 export enum AppButtonVariants {
   flat = 'flat',
-  natural = 'natural',
+  outline = 'outline',
 }
 
 @Directive({
