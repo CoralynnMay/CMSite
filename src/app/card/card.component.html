@@ -1,0 +1,5 @@
+<div class="card__container">
+  <ng-content select="app-card-front"></ng-content>
+  <button class="flip-button--front" (click)="flipCard()">&raquo;</button>
+  <ng-content select="app-card-back"></ng-content>
+</div>
