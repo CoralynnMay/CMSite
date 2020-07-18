@@ -11,12 +11,10 @@
 
   border: none;
   text-decoration: none;
-  border-radius: 1rem;
   padding: 1rem 1.5rem;
   font-size: 1.6rem;
   font-family: $font-primary;
   color: var(--color-text-invert);
-  // background-color: var(--color-primary);
   transition: all 0.2s;
 
   &:hover {
@@ -33,39 +31,53 @@
     margin-right: 3rem;
   }
 
+  :host(.btn-flat) & {
+    background-color: var(--background-color);
+    border-radius: 0;
+  }
+
+  :host(.btn-natural) & {
+    background-image: var(--background-image);
+    border-radius: 0.6rem;
+  }
+
   :host(.btn-primary) & {
     @media only screen and (prefers-color-scheme: light) {
-      background-image: linear-gradient(
+      --background-image: linear-gradient(
         to bottom right,
-        mix(#fff, $color-primary-light, 20%),
-        mix(#000, $color-primary-light, 20%)
+        #{mix(#fff, $color-primary-light, 30%)},
+        #{mix(#fff, $color-primary-light, 00%)}
       );
     }
 
     @media only screen and (prefers-color-scheme: dark) {
-      background-image: linear-gradient(
+      --background-image: linear-gradient(
         to bottom right,
-        mix(#fff, $color-primary-dark, 15%),
-        mix(#000, $color-primary-dark, 35%)
+        #{mix(#fff, $color-primary-dark, 15%)},
+        #{mix(#000, $color-primary-dark, 35%)}
       );
     }
+
+    --background-color: var(--color-primary);
   }
 
   :host(.btn-secondary) & {
     @media only screen and (prefers-color-scheme: light) {
-      background-image: linear-gradient(
+      --background-image: linear-gradient(
         to bottom right,
-        mix(#fff, $color-secondary-light, 20%),
-        mix(#000, $color-secondary-light, 20%)
+        #{mix(#fff, $color-secondary-light, 20%)},
+        #{mix(#000, $color-secondary-light, 20%)}
       );
     }
 
     @media only screen and (prefers-color-scheme: dark) {
-      background-image: linear-gradient(
+      --background-image: linear-gradient(
         to bottom right,
-        mix(#fff, $color-secondary-dark, 15%),
-        mix(#000, $color-secondary-dark, 35%)
+        #{mix(#fff, $color-secondary-dark, 15%)},
+        #{mix(#000, $color-secondary-dark, 35%)}
       );
     }
+
+    --background-color: var(--color-secondary);
   }
 }

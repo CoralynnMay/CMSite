@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './button/button.component';
 import { ButtonStyleDirective } from './button-style.directive';
+import { ButtonVariantDirective } from './button-variant.directive';
 
 @NgModule({
-  declarations: [AppComponent, ButtonComponent, ButtonStyleDirective],
+  declarations: [AppComponent, ButtonComponent, ButtonStyleDirective, ButtonVariantDirective],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
