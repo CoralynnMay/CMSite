@@ -1,0 +1,58 @@
+@import "../../abstract";
+
+.nav__button {
+  position: relative;
+  text-decoration: none;
+  font-size: 3rem;
+  border-bottom: 0.2rem solid var(--color-text);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__button-text-static {
+  color: var(--color-text);
+}
+
+.nav__button-text-dynamic,
+.nav__button-text-dynamic--inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  transition: all 0.5s ease;
+}
+
+.nav__button-text-dynamic {
+  background-color: var(--color-text);
+  height: 0;
+  transform: translate(calc(0.3rem - 100%), -50%);
+  transition: height 0.2s, transform 0.01s 0.2s; //asymetric timing to fix a bug
+
+  .nav__button:hover & {
+    height: 100%;
+
+    transition: height 0.2s, transform 0.3s cubic-bezier(1, 0, 0, 1) 0.2s;
+    transform: translate(0, -50%);
+  }
+}
+
+.nav__button-text-dynamic--inner {
+  transform: translate(calc(100% - 0.3rem), -50%);
+  color: var(--color-text-invert);
+  transition: transform 0.01s 0.2s; //asymetric timing to fix a bug
+
+  .nav__button:hover & {
+    transition: transform 0.3s cubic-bezier(1, 0, 0, 1) 0.2s;
+    transform: translate(0, -50%);
+  }
+}

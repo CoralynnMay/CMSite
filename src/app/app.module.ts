@@ -9,6 +9,7 @@ import { ButtonVariantDirective } from './button/button-variant.directive';
 import { CardComponent } from './card/card.component';
 import { CardFrontComponent } from './card/card-front/card-front.component';
 import { CardBackComponent } from './card/card-back/card-back.component';
+import { NavButtonComponent } from './nav-button/nav-button.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CardBackComponent } from './card/card-back/card-back.component';
     CardComponent,
     CardFrontComponent,
     CardBackComponent,
+    NavButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
