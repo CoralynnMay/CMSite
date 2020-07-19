@@ -8,6 +8,10 @@
 html {
   font-size: 10/16 * 100%; // Set default font size to 10px responsively to make using rem easier for desktop page size
   background-color: var(--color-background);
+
+  @media only screen and (max-width: 800px) {
+    font-size: 8/16 * 100%;
+  }
 }
 
 body {
