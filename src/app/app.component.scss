@@ -186,13 +186,13 @@
   }
 }
 
-.benefits--1 {
+.benefits-1 {
   grid-area: ben1;
 }
-.benefits--2 {
+.benefits-2 {
   grid-area: ben2;
 }
-.benefits--3 {
+.benefits-3 {
   grid-area: ben3;
 }
 
@@ -271,7 +271,7 @@
   }
 }
 
-.technologies__logo--rails {
+.technologies_logo-rails {
   width: 30%;
   @media only screen and (max-width: 700px) {
     width: 50%;
@@ -279,7 +279,7 @@
 }
 
 .technologies__logo,
-.technologies__logo--rails {
+.technologies_logo-rails {
   @media only screen and (max-width: 700px) {
     margin-bottom: 7rem;
   }
