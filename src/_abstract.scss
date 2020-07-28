@@ -22,7 +22,7 @@ $color-shadow-dark: hsla(198, 29%, 8%, 50%);
   --color-text-invert-primary: #{$color-text-light};
   --color-text-invert: #{$color-text-dark};
   --color-text-muted: #{$color-text-muted-light};
-  --color-primary: #{$color-primary-dark};
+  --color-primary: #{$color-primary-light};
   --color-secondary: #{$color-secondary-light};
   --color-shadow: #{$color-shadow-light};
   @media (prefers-color-scheme: dark) {
