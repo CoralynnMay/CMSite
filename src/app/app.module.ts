@@ -10,6 +10,8 @@ import { CardComponent } from './card/card.component';
 import { CardFrontComponent } from './card/card-front/card-front.component';
 import { CardBackComponent } from './card/card-back/card-back.component';
 import { NavButtonComponent } from './nav-button/nav-button.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { NavButtonComponent } from './nav-button/nav-button.component';
     CardBackComponent,
     NavButtonComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [],
   bootstrap: [AppComponent],
 })

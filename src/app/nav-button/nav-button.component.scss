@@ -11,9 +11,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 700px) {
     font-size: 2.25rem;
-    border-bottom: 0.2rem solid var(--color-text-invert);
+    border-bottom: 0.2rem solid var(--color-text-primary);
   }
 }
 
@@ -21,8 +21,8 @@
   color: var(--color-text);
   z-index: 20;
 
-  @media only screen and (max-width: 800px) {
-    color: var(--color-text-invert);
+  @media only screen and (max-width: 700px) {
+    color: var(--color-text-primary);
   }
 }
 
@@ -48,8 +48,8 @@
   transform: translate(calc(0.3rem - 100%), -50%);
   transition: height 0.2s, transform 0.01s 0.2s; //asymetric timing to fix a bug
 
-  @media only screen and (max-width: 800px) {
-    background-color: var(--color-text-invert);
+  @media only screen and (max-width: 700px) {
+    background-color: var(--color-text-primary);
   }
 
   .nav__button:hover & {
@@ -62,11 +62,11 @@
 
 .nav__button-text-dynamic--inner {
   transform: translate(calc(100% - 0.3rem), -50%);
-  color: var(--color-text-invert);
+  color: var(--color-text-invert-primary);
   transition: transform 0.01s 0.2s; //asymetric timing to fix a bug
 
-  @media only screen and (max-width: 800px) {
-    color: var(--color-text);
+  @media only screen and (max-width: 700px) {
+    color: var(--color-text-invert-primary);
   }
 
   .nav__button:hover & {
