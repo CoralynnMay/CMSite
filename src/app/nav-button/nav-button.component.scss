@@ -62,7 +62,7 @@
 
 .nav__button-text-dynamic--inner {
   transform: translate(calc(100% - 0.3rem), -50%);
-  color: var(--color-text-invert);
+  color: var(--color-text-invert-primary);
   transition: transform 0.01s 0.2s; //asymetric timing to fix a bug
 
   @media only screen and (max-width: 700px) {
